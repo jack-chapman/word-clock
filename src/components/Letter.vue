@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
 export default Vue.extend({
   name: 'letter',
   props: {
@@ -19,11 +19,11 @@ export default Vue.extend({
   computed: {
     classes(): object {
       return {
-        'on': this.isOn
-      }
+        on: this.isOn
+      };
     }
   }
-})
+});
 </script>
 
 <style lang="scss" scoped>

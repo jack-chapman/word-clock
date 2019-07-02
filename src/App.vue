@@ -72,7 +72,7 @@ export default Vue.extend({
       let hour =
         this.hours > 12 ? this.hours - 12 : this.hours === 0 ? 12 : this.hours;
       if (this.minutes > 30) {
-        hour < 12 ? hour++ : hour = 1;
+        hour < 12 ? hour++ : (hour = 1);
       }
       switch (hour) {
         default:
@@ -89,7 +89,7 @@ export default Vue.extend({
         case 6:
           return [58, 59, 60];
         case 7:
-          return [88,89, 90, 91, 92];
+          return [88, 89, 90, 91, 92];
         case 8:
           return [77, 78, 79, 80, 81];
         case 9:
