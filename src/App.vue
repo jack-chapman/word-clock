@@ -88,7 +88,7 @@ export default Vue.extend({
         case 7:
           return [88,89, 90, 91, 92];
         case 8:
-          return [77, 78, 79, 80];
+          return [77, 78, 79, 80, 81];
         case 9:
           return [51, 52, 53, 54];
         case 10:
