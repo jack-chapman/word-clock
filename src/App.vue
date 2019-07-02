@@ -137,7 +137,7 @@ export default Vue.extend({
 
 .container {
   display: grid;
-  grid-template: repeat(11, 20px) / repeat(10, 20px);
+  grid-template: repeat(10, 20px) / repeat(11, 20px);
 }
 
 .time {
