@@ -27,6 +27,9 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+p {
+  transition: color 0.2s ease;
+}
 .on {
   color: coral;
 }
