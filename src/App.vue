@@ -43,7 +43,7 @@ export default Vue.extend({
       switch (this.roundedMinute) {
         default:
         case 0:
-          return [105, 106, 107, 108, 109, 110];
+          return [104, 105, 106, 107, 108, 109];
         case 5:
           return [28, 29, 30, 31, 44, 45, 46, 47];
         case 10:
