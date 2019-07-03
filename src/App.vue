@@ -71,7 +71,7 @@ export default Vue.extend({
     hourIndexes(): number[] {
       let hour =
         this.hours > 12 ? this.hours - 12 : this.hours === 0 ? 12 : this.hours;
-      if (this.minutes > 30) {
+      if (this.minutes > 35) {
         hour < 12 ? hour++ : (hour = 1);
       }
       switch (hour) {
