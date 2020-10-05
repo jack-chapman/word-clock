@@ -9,27 +9,27 @@
       />
     </div>
     <div class="time">
-      <p>{{now}}</p>
+      <p>{{ now }}</p>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent } from 'vue';
 import Letter from './components/Letter.vue';
 import LetterList from './components/letterList';
 
-export default Vue.extend({
+export default defineComponent({
   name: 'app',
   components: {
-    Letter
+    Letter,
   },
   data() {
     return {
       now: '',
       hours: 0,
       minutes: 0,
-      intervalId: 0
+      intervalId: 0,
     };
   },
   computed: {
@@ -104,13 +104,13 @@ export default Vue.extend({
     },
     indexes(): number[] {
       return [0, 1, 3, 4, ...this.minuteIndexes, ...this.hourIndexes];
-    }
+    },
   },
   mounted() {
     this.getCurrentTime();
     this.intervalId = setInterval(this.getCurrentTime, 1000);
   },
-  destroyed() {
+  unmounted() {
     clearInterval(this.intervalId);
   },
   methods: {
@@ -119,8 +119,8 @@ export default Vue.extend({
       this.now = d.toLocaleTimeString('en-GB');
       this.hours = d.getHours();
       this.minutes = d.getMinutes();
-    }
-  }
+    },
+  },
 });
 </script>
 
@@ -136,6 +136,11 @@ export default Vue.extend({
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+  @media (prefers-color-scheme: dark) {
+    color: #fff;
+    background: #2c3e50;
+  }
 }
 
 .container {

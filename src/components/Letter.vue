@@ -1,28 +1,28 @@
 <template>
-  <p :class="classes">{{character}}</p>
+  <p :class="classes">{{ character }}</p>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-export default Vue.extend({
+import { defineComponent } from 'vue';
+export default defineComponent({
   name: 'letter',
   props: {
     character: {
       type: String,
-      required: true
+      required: true,
     },
     isOn: {
       type: Boolean,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
     classes(): object {
       return {
-        on: this.isOn
+        on: this.isOn,
       };
-    }
-  }
+    },
+  },
 });
 </script>
 
