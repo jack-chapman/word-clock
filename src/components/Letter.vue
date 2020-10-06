@@ -4,6 +4,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
+interface LetterClasses {
+  on: boolean;
+}
+
 export default defineComponent({
   name: 'letter',
   props: {
@@ -17,7 +22,7 @@ export default defineComponent({
     },
   },
   computed: {
-    classes(): object {
+    classes(): LetterClasses {
       return {
         on: this.isOn,
       };
@@ -29,6 +34,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 p {
   transition: color 0.2s ease;
+  margin: 0;
 }
 .on {
   color: coral;

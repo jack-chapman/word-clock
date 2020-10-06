@@ -108,5 +108,5 @@ export default [
   'L',
   'O',
   'C',
-  'K'
+  'K',
 ];
