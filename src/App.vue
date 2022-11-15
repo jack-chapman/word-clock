@@ -5,7 +5,7 @@
         v-for="(l, index) in list"
         :key="index"
         :character="l"
-        :isOn="indexes.includes(index)"
+        :is-on="indexes.includes(index)"
       />
     </div>
     <div class="time">
@@ -16,13 +16,13 @@
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
-import Letter from './components/Letter.vue';
+import Letter from './components/ClockLetter.vue';
 import list from './helpers/letterList';
 import { useIndexes } from './helpers/indexes';
 import { useTime } from './helpers/time';
 
 export default defineComponent({
-  name: 'app',
+  name: 'App',
   components: {
     Letter,
   },

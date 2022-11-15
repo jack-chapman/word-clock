@@ -10,7 +10,7 @@ interface LetterClasses {
 }
 
 export default defineComponent({
-  name: 'letter',
+  name: 'ClockLetter',
   props: {
     character: {
       type: String,
